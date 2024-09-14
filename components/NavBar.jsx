@@ -1,13 +1,16 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import WrapperMaxWidth from "./WrapperMaxWidth";
 import Image from "next/image";
 import logo from "../public/images/logo.png";
 import Link from "next/link";
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header>
-      <WrapperMaxWidth className="bg-[#111] px-[97px] flex justify-between items-center py-[34px]">
+    <header className="bg-[#111]">
+      <WrapperMaxWidth className="px-4 sm:px-6 lg:px-[97px] flex justify-between items-center py-4 lg:py-[34px]">
         <Link href="/" className="text-sm text-[#fff] uppercase">
           <Image
             src={logo}
@@ -16,12 +19,21 @@ const NavBar = () => {
             height={26}
             style={{
               maxWidth: "100%",
-              height: "100%",
+              height: "auto",
             }}
           />
         </Link>
 
-        <div className="flex gap-[76px] pr-[23px] items-end">
+        {/* Mobile menu button */}
+        <button
+          className="lg:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? "Close" : "Menu"}
+        </button>
+
+        {/* Desktop menu */}
+        <div className="hidden lg:flex gap-[76px] pr-[23px] items-end">
           <Link href="/introduce" className="text-sm text-[#fff] uppercase">
             Introduction
           </Link>

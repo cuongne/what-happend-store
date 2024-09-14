@@ -148,9 +148,9 @@ const ProductPage = () => {
     setPage(page);
   };
   return (
-    <div className="flex flex-col px-[96px] py-[90px]">
-      <div className="flex justify-between">
-        <div className="flex flex-col gap-[11px] w=[4%]">
+    <div className="flex flex-col px-4 sm:px-6 md:px-8 lg:px-[96px] py-[90px]">
+      <div className="flex flex-col lg:flex-row justify-between">
+        <div className="flex flex-row lg:flex-col gap-[11px] w-full lg:w-[4%] mb-4 lg:mb-0">
           <Button
             className={cn(
               "border-[2px] transition-colors duration-150",
@@ -180,8 +180,8 @@ const ProductPage = () => {
             />
           </Button>
         </div>
-        <div className="flex flex-col items-center w-[40%">
-          <div className="relative w-[707px] h-[707px]">
+        <div className="flex flex-col items-center w-full lg:w-[40%] mb-8 lg:mb-0">
+          <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:w-[707px] lg:h-[707px]">
             {images.map((image, index) => (
               <Image
                 key={index}
@@ -209,7 +209,7 @@ const ProductPage = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col w-[38%]">
+        <div className="flex flex-col w-full lg:w-[38%]">
           <div className="h-[2px] w-full bg-[#111] mb-[30px]"></div>
           <div>
             <h1 className="text-2xl font-medium mb-[30px] flex justify-between">
@@ -336,11 +336,11 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center">
-        <span className="uppercase font-notoSansKR-Medium text-2xl">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mt-8 lg:mt-0">
+        <span className="uppercase font-notoSansKR-Medium text-xl lg:text-2xl mb-4 lg:mb-0">
           상품 qna
         </span>
-        <div className="flex gap-7">
+        <div className="flex flex-wrap gap-4 lg:gap-7">
           {[
             "상품 상세정보",
             "상품 구매 안내",
@@ -481,10 +481,10 @@ const ProductPage = () => {
         currentPage={page}
         onPageChange={handleChangePage}
       />
-      <span className="block mb-5 font-notoSansKR-Regular text-[#111] font-semibold text-2xl mt-[108px]">
+      <span className="block mb-5 font-notoSansKR-Regular text-[#111] font-semibold text-xl lg:text-2xl mt-[108px]">
         관련 상품 BEST
       </span>
-      <div className="product-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-14">
+      <div className="product-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-14">
         {productCards}
       </div>
       <Pagination

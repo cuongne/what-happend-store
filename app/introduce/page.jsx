@@ -11,11 +11,11 @@ const Introduce = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center flex-col py-[173px] bg-[url('/images/introduction-bg.png')] bg-cover">
-        <span className="block mb-[59px] text-[50px] text-center text-[#fff] tracking-[5px] font-extrabold uppercase">
+      <div className="flex items-center justify-center flex-col py-12 md:py-[173px] bg-[url('/images/introduction-bg.png')] bg-cover px-4">
+        <span className="block mb-6 md:mb-[59px] text-3xl md:text-[50px] text-center text-[#fff] tracking-[5px] font-extrabold uppercase">
           What Happened!
         </span>
-        <span className="block text-[19px] max-w-[667px] text-[#fff] text-center">
+        <span className="block text-base md:text-[19px] max-w-[667px] text-[#fff] text-center">
           How to create mobile-optimized videos in minutes. Not a designer,
           every team makes a lot of videos Can be trimmed. Take the first step
           to your brand&apos;s success. How to create mobile-optimized videos in
@@ -23,12 +23,12 @@ const Introduce = () => {
         </span>
       </div>
 
-      <div className="flex items-center justify-center gap-[30px] bg-[#ea4913] py-[36px]">
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-[30px] bg-[#ea4913] py-6 md:py-[36px] px-4">
         {tabs.map((tab) => (
           <button
             key={tab}
             className={cn(
-              "border-[3px] rounded-3xl border-[#111] font-extrabold text-lg uppercase w-[221px] h-[51px]",
+              "border-[3px] rounded-3xl border-[#111] font-extrabold text-sm md:text-lg uppercase w-full md:w-[221px] h-[51px]",
               `${
                 activeTab === tab
                   ? "text-[#245fc5] bg-[#fcd32a]"
@@ -41,8 +41,8 @@ const Introduce = () => {
           </button>
         ))}
       </div>
-      <div className="flex items-center justify-center flex-col">
-        <span className="font-semibold text-[#0658c2] text-[72px] block w-full text-center uppercase mt-[73px]">
+      <div className="flex items-center justify-center flex-col px-4">
+        <span className="font-semibold text-[#0658c2] text-4xl md:text-[72px] block w-full text-center uppercase mt-8 md:mt-[73px]">
           what happnned to?
         </span>
 
@@ -59,13 +59,13 @@ const Introduce = () => {
             입니다.
           </p>
         </div>
-        <span className="text-[30px] block text-center text-[#111111] max-w-[977px] mt-[75px] font-notoSansKR">
+        <span className="text-xl md:text-[30px] block text-center text-[#111111] max-w-[977px] mt-8 md:mt-[75px] font-notoSansKR">
           &quot;what happened to&quot; wants to make your everyday, &quot;oh
           happy day!&quot;<br/> we design daily items that can make you smile,<br/> 
           believing that small things can bring you big joy. Thank you, as
           always!
         </span>
-        <span className="font-semibold text-[#0658c2] text-[72px] block w-full text-center uppercase mt-[234px] mb-[80px]">
+        <span className="font-semibold text-[#0658c2] text-4xl md:text-[72px] block w-full text-center uppercase mt-16 md:mt-[234px] mb-8 md:mb-[80px]">
           contact us
         </span>
         <p className="text-2xl mb-[10px]">
@@ -77,7 +77,7 @@ const Introduce = () => {
         <p className="text-2xl mb-[10px]">+82 2 000 0000</p>
         <p className="text-2xl mb-[10px]">wht30@gmail.com</p>
 
-        <span className="font-semibold text-[#0658c2] text-[72px] block w-full text-center uppercase mt-[79px] mb-[80px]">
+        <span className="font-semibold text-[#0658c2] text-4xl md:text-[72px] block w-full text-center uppercase mt-16 md:mt-[234px] mb-8 md:mb-[80px]">
           partnership
         </span>
         <p className="text-2xl mb-[10px]">
@@ -89,8 +89,8 @@ const Introduce = () => {
         <p className="text-2xl mb-[10px]">+82 2 000 0000</p>
         <p className="text-2xl mb-[10px]">wht30@gmail.com</p>
       </div>
-      <div className="flex w-full items-center justify-center mt-[152px] mb-[161px]">
-        <ImageFullFill src={introduce} width={1640} height={850} />
+      <div className="flex w-full items-center justify-center mt-16 md:mt-[152px] mb-16 md:mb-[161px] px-4">
+        <ImageFullFill src={introduce} width={1640} height={850} className="w-full h-auto" />
       </div>
     </>
   );

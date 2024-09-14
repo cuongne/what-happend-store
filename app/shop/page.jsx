@@ -18,11 +18,11 @@ const categories = [
 
 const SortSelect = ({ value, onChange }) => {
   return (
-    <div className="relative">
+    <div className="relative w-full sm:w-auto">
       <select
         value={value}
         onChange={onChange}
-        className="font-notoSansKR text-sm w-[125px] h-[37px] px-[11px] border border-[#111] appearance-none bg-white focus:outline-none focus:ring-0"
+        className="font-notoSansKR text-sm w-full sm:w-[125px] h-[37px] px-[11px] border border-[#111] appearance-none bg-white focus:outline-none focus:ring-0"
       >
         <option value="featured">인기순</option>
         <option value="newest">Newest</option>
@@ -33,11 +33,11 @@ const SortSelect = ({ value, onChange }) => {
 
 const SearchInput = () => {
   return (
-    <div className="relative">
+    <div className="relative w-full sm:w-auto">
       <input
         type="text"
         placeholder="결과 내 검색"
-        className="font-notoSansKR text-sm w-[281px] h-[37px] px-[11px] border border-[#111] focus:outline-none focus:ring-0 "
+        className="font-notoSansKR text-sm w-full sm:w-[281px] h-[37px] px-[11px] border border-[#111] focus:outline-none focus:ring-0"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ const GridButton = ({ type, active, onClick }) => {
   );
 };
 const productCards = Array.from({ length: 20 }, (_, index) => (
-  <ProductCard key={index} className="w-[415px]" width="415px" height="417px" />
+  <ProductCard key={index} className="max-w-[415px]" width="415px" height="417px" />
 ));
 const Shop = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -91,15 +91,15 @@ const Shop = () => {
     setPage(page);
   };
   return (
-    <div className="px-[100px] flex flex-col items-center">
-      <ImageFullFill src={bannerProduct} width={1930} height={640} />
-      <div className="flex flex-col items-center mt-[39px]">
-        <div className="flex">
+    <div className="px-4 sm:px-6 md:px-8 lg:px-[100px] flex flex-col items-center">
+      <ImageFullFill src={bannerProduct} width={1930} height={640} className="w-full" />
+      <div className="flex flex-col items-center mt-4 sm:mt-[39px] w-full">
+        <div className="flex flex-wrap justify-center">
           {categories.map((category) => (
             <button
               key={category}
               className={cn(
-                "border-none font-extrabold text-lg uppercase w-[161px] h-[78px]",
+                "border-none font-extrabold text-base sm:text-lg uppercase w-1/2 sm:w-[161px] h-[60px] sm:h-[78px]",
                 `${
                   activeCategory === category
                     ? "text-[#245fc5]"
@@ -113,15 +113,15 @@ const Shop = () => {
           ))}
         </div>
         <div className="h-[2px] w-full bg-[#111]"></div>
-        <span className="pl-[98px] py-[23px] block w-full font-notoSansKR font-bold text-[#ea4913]">
+        <span className="pl-4 sm:pl-[98px] py-4 sm:py-[23px] block w-full font-notoSansKR font-bold text-[#ea4913] text-sm sm:text-base">
           전체보기
         </span>
         <div className="h-[2px] w-full bg-[#a1a1a1]"></div>
-        <div className="flex w-full justify-between items-center mt-[35px] mb-[61px]">
-          <span className="font-notoSansKR text-[#111111] font-bold">
+        <div className="flex flex-col sm:flex-row w-full justify-between items-center mt-4 sm:mt-[35px] mb-6 sm:mb-[61px]">
+          <span className="font-notoSansKR text-[#111111] font-bold text-sm sm:text-base mb-4 sm:mb-0">
             전체 상품 207
           </span>
-          <div className="flex gap-[9px]">
+          <div className="flex flex-wrap gap-2 sm:gap-[9px] justify-center sm:justify-start">
             <GridButton
               type="2x2"
               active={gridType === "2x2"}
@@ -136,7 +136,11 @@ const Shop = () => {
             <SearchInput />
           </div>
         </div>
-        <div className="product-list grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[19px] gap-y-[67px]">
+        <div className={`product-list grid gap-4 sm:gap-x-[19px] sm:gap-y-[67px] w-full ${
+          gridType === "2x2" 
+            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" 
+            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        }`}>
           {productCards}
         </div>
         <Pagination

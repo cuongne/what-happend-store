@@ -4,8 +4,8 @@ import banner from "../../../public/images/main-banner.png";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[1000px]">
-      <Image src={banner} alt="banner" layout="fill" quality={100} />
+    <div className="relative w-full h-[37.5rem] md:h-[50rem] lg:h-[62.5rem]">
+      <Image src={banner} alt="banner" fill className="object-cover" />
     </div>
   );
 };

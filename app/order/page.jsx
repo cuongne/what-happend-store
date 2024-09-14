@@ -4,9 +4,9 @@ const Order = () => {
   const RequiredAsterisk = () => <span className="text-[#ea4913]">*</span>;
 
   return (
-    <div className="flex pt-[88px] pb-[60px] px-[144px]">
-      <div className="flex flex-col w-1/2">
-        <span className="font-extrabold text-[#0565bb] text-[36px] uppercase">
+    <div className="flex flex-col pt-[88px] pb-[60px] px-4 sm:px-8 md:px-16 lg:px-[144px]">
+      <div className="w-full lg:w-1/2">
+        <span className="font-extrabold text-[#0565bb] text-2xl sm:text-3xl md:text-[36px] uppercase">
           ORDER
         </span>
         <div className="flex items-center  mb-10 mt-16 text-sm">
@@ -40,31 +40,31 @@ const Order = () => {
         <div className="h-[2px] w-full bg-[#222] mt-5"></div>
 
         <form className="mt-6 space-y-4">
-          <div className="flex items-center w-[80%]">
-            <label htmlFor="recipient" className="w-1/4 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row sm:items-center w-full sm:w-[80%]">
+            <label htmlFor="recipient" className="w-full sm:w-1/4 text-lg font-medium mb-2 sm:mb-0">
               배송지 선택
             </label>
             <input
               type="text"
               id="recipient"
-              className="border border-[#a1a1a1] p-2 h-11 w-[480px]"
+              className="border border-[#a1a1a1] p-2 h-11 w-full sm:w-[480px]"
             />
           </div>
 
-          <div className="flex items-center w-[80%]">
-            <label htmlFor="name" className="w-1/4 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row sm:items-center w-full sm:w-[80%]">
+            <label htmlFor="name" className="w-full sm:w-1/4 text-lg font-medium mb-2 sm:mb-0">
               수령인 <RequiredAsterisk />
             </label>
             <input
               type="text"
               id="name"
-              className="border border-[#a1a1a1] p-2 flex-grow w-[480px]"
+              className="border border-[#a1a1a1] p-2 flex-grow w-full sm:w-[480px]"
               required
             />
           </div>
 
-          <div className="flex items-center w-[80%]">
-            <label htmlFor="phone" className="w-1/4 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row sm:items-center w-full sm:w-[80%]">
+            <label htmlFor="phone" className="w-full sm:w-1/4 text-lg font-medium mb-2 sm:mb-0">
               배송지 <RequiredAsterisk />
             </label>
             <div className="flex flex-grow space-x-2">
@@ -83,57 +83,57 @@ const Order = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-end w-[100%]">
+          <div className="flex items-center justify-end w-full">
             <input
               type="text"
               id="address"
-              className="border border-[#a1a1a1] p-2 w-[644px]"
+              className="border border-[#a1a1a1] p-2 w-full"
             />
           </div>
 
-          <div className="flex items-center">
-            <label className="w-1/5 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label className="w-full sm:w-1/5 text-lg font-medium mb-2 sm:mb-0">
               연락처1 <RequiredAsterisk />
             </label>
             <div className="flex flex-grow space-x-2 items-center">
               <input
                 type="text"
-                className="border border-[#a1a1a1] p-2 w-[100px]"
+                className="border border-[#a1a1a1] p-2 w-full sm:w-[100px]"
                 required
               />
               <span>-</span>
               <input
                 type="text"
-                className="border border-[#a1a1a1] p-2 w-[100px]"
+                className="border border-[#a1a1a1] p-2 w-full sm:w-[100px]"
                 required
               />
               <span>-</span>
               <input
                 type="text"
-                className="border border-[#a1a1a1] p-2 w-[100px]"
+                className="border border-[#a1a1a1] p-2 w-full sm:w-[100px]"
                 required
               />
             </div>
           </div>
 
-          <div className="flex items-center">
-            <label className="w-1/5 text-lg font-medium">연락처2</label>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label className="w-full sm:w-1/5 text-lg font-medium mb-2 sm:mb-0">연락처2</label>
             <div className="flex flex-grow space-x-2 items-center">
               <input
                 type="text"
-                className="border border-[#a1a1a1] p-2 w-[100px]"
+                className="border border-[#a1a1a1] p-2 w-full sm:w-[100px]"
                 required
               />
               <span>-</span>
               <input
                 type="text"
-                className="border border-[#a1a1a1] p-2 w-[100px]"
+                className="border border-[#a1a1a1] p-2 w-full sm:w-[100px]"
                 required
               />
               <span>-</span>
               <input
                 type="text"
-                className="border border-[#a1a1a1] p-2 w-[100px]"
+                className="border border-[#a1a1a1] p-2 w-full sm:w-[100px]"
                 required
               />
             </div>
@@ -168,8 +168,8 @@ const Order = () => {
           </span>
 
           <div className="h-[2px] w-full bg-[#222] mt-5"></div>
-          <div className="flex items-center">
-            <label htmlFor="a" className="w-1/5 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label htmlFor="a" className="w-full sm:w-1/5 text-lg font-medium mb-2 sm:mb-0">
               쿠폰
             </label>
             <input
@@ -180,8 +180,8 @@ const Order = () => {
             />
           </div>
 
-          <div className="flex items-center">
-            <label htmlFor="b" className="w-1/5 text-lg font-medium">
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <label htmlFor="b" className="w-full sm:w-1/5 text-lg font-medium mb-2 sm:mb-0">
               마일리지
             </label>
             <input
@@ -214,7 +214,7 @@ const Order = () => {
             ].map((method) => (
               <button
                 key={method}
-                className="py-4  text-sm border border-[#111] w-[154px] hover:bg-[#ea4913] hover:text-[#fff]"
+                className="py-4 text-xs sm:text-sm border border-[#111] w-full sm:w-[154px] hover:bg-[#ea4913] hover:text-[#fff]"
               >
                 {method}
               </button>

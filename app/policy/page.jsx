@@ -1,12 +1,12 @@
 const Policy = () => {
   return (
-    <div className="flex items-center justify-center flex-col pt-[90px] pb-[147px] px-[146px]">
-      <span className="font-extrabold text-[#0565bb] text-[45px] uppercase">
+    <div className="flex items-center justify-center flex-col pt-10 pb-16 px-4 sm:px-8 md:px-16 lg:px-24">
+      <h1 className="font-extrabold text-[#0565bb] text-3xl sm:text-4xl md:text-5xl uppercase text-center">
         privacy & policy
-      </span>
-      <div className="h-[2px] w-full bg-[#222222] mt-[57px] mb-[33px]"></div>
+      </h1>
+      <div className="h-[2px] w-full bg-[#222222] mt-8 mb-6"></div>
 
-      <div className="text-left w-full px-[29px] py-[49px]">
+      <div className="text-left w-full py-6">
         <span>
           제1조(목적) 이 약관은 OO 회사(전자상거래 사업자)가 운영하는 OO 사이버
           몰(이하 &ldquo;몰&rdquo;이라 한다)에서 제공하는 인터넷 관련
@@ -15,7 +15,7 @@ const Policy = () => {
           무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이
           약관을 준용합니다」 제2조(정의)
         </span>
-        <h2 className="text-2xl font-bold mb-4">① 목적</h2>
+        <h2 className="text-xl sm:text-2xl font-bold mb-4">① 목적</h2>
         <p>
           이 약관은 OO 회사(전자상거래 사업자)가 운영하는 OO 사이버 몰(이하
           &ldquo;몰&rdquo;이라 한다)에서 제공하는 인터넷 관련 서비스(이하
@@ -27,8 +27,8 @@ const Policy = () => {
           않는 한 이 약관을 준용합니다.
         </p>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4">② 정의</h2>
-        <ol className="list-decimal list-inside">
+        <h2 className="text-xl sm:text-2xl font-bold mt-8 mb-4">② 정의</h2>
+        <ol className="list-decimal list-inside space-y-2">
           <li>
             &ldquo;몰&rdquo;이란 OO 회사가 재화 또는 용역(이하
             &ldquo;재화등&rdquo;이라 함)을 이용자에게 제공하기 위하여 컴퓨터등
@@ -52,10 +52,10 @@ const Policy = () => {
           </li>
         </ol>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4">
+        <h2 className="text-xl sm:text-2xl font-bold mt-8 mb-4">
           ③ 약관 등의 명시와 설명 및 개정
         </h2>
-        <ol className="list-decimal list-inside">
+        <ol className="list-decimal list-inside space-y-2">
           <li>
             &ldquo;몰&rdquo;은 이 약관의 내용과 상호 및 대표자 성명, 영업소
             소재지 주소(소비자의 불만을 처리할 수 있는 곳의 주소를 포함),
@@ -67,10 +67,10 @@ const Policy = () => {
           </li>
         </ol>
 
-        <h2 className="text-2xl font-bold mt-8 mb-4">
+        <h2 className="text-xl sm:text-2xl font-bold mt-8 mb-4">
           ④ &ldquo;몰&rdquo;의 의무
         </h2>
-        <ol className="list-decimal list-inside">
+        <ol className="list-decimal list-inside space-y-2">
           <li>
             &ldquo;몰&rdquo;은 법령과 이 약관이 금지하거나 공서양속에 반하는
             행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고, 안정적으로
@@ -92,7 +92,7 @@ const Policy = () => {
           </li>
         </ol>
       </div>
-      <div className="h-[2px] w-full bg-[#222222] mt-[57px] mb-[33px]"></div>
+      <div className="h-[2px] w-full bg-[#222222] mt-8 mb-6"></div>
     </div>
   );
 };
