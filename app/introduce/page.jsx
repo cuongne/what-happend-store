@@ -49,10 +49,10 @@ const Introduce = () => {
         <div className="text-center  mt-[90px]">
           <p className="mb-6 text-[30px] font-semibold">
             WHAT HAPPENED의 이야기는 우리들의 살아가는 <br />
-            'WHAT HAPPENED TO?' 라는 마음으로 <br />
+            &apos;WHAT HAPPENED TO?&apos; 라는 마음으로 <br />
             일상속의 작은 물건들이 ~할 수 있으며 있으며, 일상속의 작은 물건들이
             ~할 수 있으며 <br />
-            '무엇'을 모티브로 하여 다양한 작업을 하고 있습니다. <br />
+            &apos;무엇&apos;을 모티브로 하여 다양한 작업을 하고 있습니다. <br />
             일상속의 작은 물건들이 ~할 수 있으며 있으며, 중심으로 <br />
             당신의 삶을 더 행복하게 만드는, <br />
             친절하고 다정하며 공감이 되는 디자인을 하는 것이 왓해픈의 방향성
