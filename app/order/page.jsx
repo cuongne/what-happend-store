@@ -158,16 +158,20 @@ const Order = () => {
 
             <div className="flex w-[80%] -translate-x-[6px] gap-2">
               <div className="relative">
-                <input type="checkbox" id="checkbox" className="sr-only peer" />
-                <div className="w-[20px] h-[20px] bg-white border border-[#a1a1a1] "></div>
-                <div className="absolute inset-0 w-[16px] h-[16px] m-[2px] peer-checked:bg-[#a1a1a1] transition-all duration-200 ease-in-out"></div>
+                <label
+                  htmlFor="checkbox"
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    className="sr-only peer"
+                  />
+                  <div className="w-[20px] h-[20px]  bg-white border border-[#a1a1a1] "></div>
+                  <div className="absolute inset-0 w-[16px] h-[16px] m-[2px] translate-y-[2px] peer-checked:bg-[#a1a1a1] transition-all duration-200 ease-in-out"></div>
+                  배송지를 기본 배송지로 저장
+                </label>
               </div>
-              <label
-                htmlFor="checkbox"
-                className="flex items-center gap-2 cursor-pointer"
-              >
-                배송지를 기본 배송지로 저장
-              </label>
             </div>
           </div>
 
@@ -356,15 +360,26 @@ const Order = () => {
         </div>
         <div className="h-[2px] w-full bg-[#222] mt-7 mb-8"></div>
         <div className="flex w-full items-center gap-4">
-          <div className="relative">
-            <input type="checkbox" id="checkbox" className="sr-only peer" />
-            <div className="w-[20px] h-[20px] bg-white border border-[#a1a1a1] "></div>
-            <div className="absolute inset-0 w-[16px] h-[16px] m-[2px] peer-checked:bg-[#a1a1a1] transition-all duration-200 ease-in-out"></div>
+          <div className="relative ">
+            <label
+              htmlFor="checkbox2"
+              className="gap-2 font-notoSansKR-Medium text-lg flex items-center"
+            >
+              <div className="relative ml-2 flex items-center">
+                <input
+                  type="checkbox"
+                  id="checkbox2"
+                  className="sr-only peer"
+                />
+                <div className="w-[20px] h-[20px] bg-white border border-[#a1a1a1]"></div>
+                <div className="absolute inset-0 w-[16px] h-[16px] m-[2px] peer-checked:bg-[#a1a1a1] transition-all duration-200 ease-in-out"></div>
+              </div>
+              <span className="translate-y-[1px]">
+                상품 및 구매 조건을 확인하였으며, 결제 대행 서비스에 동의합니다.
+                (필수)
+              </span>
+            </label>
           </div>
-          <label htmlFor="checkbox" className="font-notoSansKR-Medium text-lg">
-            상품 및 구매 조건을 확인하였으며, 결제 대행 서비스에 동의합니다.
-            (필수)
-          </label>
         </div>
         <span className="block w-full text-center text-[#999] text-xs mt-7">
           개인정보 처리 방침 & 이용약관
