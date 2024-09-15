@@ -13,34 +13,34 @@ import ImageFullFill from "@/components/ImageFullFill";
 
 const BrandStory = () => {
   return (
-    <div className="relative bg-[#0565bb] flex flex-col items-center pt-[149px] pb-[170px] overflow-hidden">
-      <span className="text-[#fcd32a] font-bold text-[45px] block text-center">
+    <div className="relative bg-[#0565bb] flex flex-col items-center pt-[9.3125rem] pb-[10.625rem] overflow-hidden">
+      <span className="text-[#fcd32a] font-bold text-[2.8125rem] block text-center">
         Brand Story
       </span>
       <span
         className={cn(
-          "text-[#fcd32a] text-center font-notoSansKR max-w-[682px] block mt-10"
+          "text-[#fcd32a] text-center font-notoSansKR max-w-[42.625rem] block mt-10"
         )}
       >
         모바일에 최적화된 비디오를 단 몇 분 만에 제작해보세요. 디자이너가
         아니더라도, 모든 팀에서 다듬을 수 있습니다. 브랜드의 성공을 위한 첫
         걸음을 내딛어보세요. 비디오를 단 몇 분 만에 제작해보세요.
       </span>
-      <div className="relative z-10 flex items-center justify-center mt-[77px]">
+      <div className="relative z-10 flex items-center justify-center mt-[4.8125rem]">
         <div className="absolute top-0">
-          <div className="relative flex flex-col items-center w-[1238px] h-6 bg-[#111111] -translate-y-full">
-            <div className="absolute top-2 h-[2px] w-[98%] bg-[#0565bb] "></div>
-            <div className="absolute top-4 h-[2px] w-[98%] bg-[#0565bb] "></div>
+          <div className="relative flex flex-col items-center w-[77.375rem] h-6 bg-[#111111] -translate-y-full">
+            <div className="absolute top-2 h-[0.125rem] w-[98%] bg-[#0565bb] "></div>
+            <div className="absolute top-4 h-[0.125rem] w-[98%] bg-[#0565bb] "></div>
           </div>
         </div>
-        <div className="relative h-[418px] w-[612px]">
+        <div className="relative h-[26.125rem] w-[38.25rem]">
           <Image src={img} alt="banner" layout="fill" quality={100} />
         </div>
-        <div className="flex flex-col py-[54px] px-[45px] h-[418px] w-[33%] bg-white border-[3px] border-[#111] border-l-0">
-          <span className="font-extrabold text-[25px] text-[#222222]">
+        <div className="flex flex-col py-[3.375rem] px-[2.8125rem] h-[26.125rem] w-[33%] bg-white border-[0.1875rem] border-[#111] border-l-0">
+          <span className="font-extrabold lg:text-xl 2xl:text-[1.5625rem] text-[#222222] uppercase">
             What Happened’s Brand story
           </span>
-          <span className="font-notoSansKR text-[#222222] mt-[39px]">
+          <span className="font-notoSansKR text-[#222222] lg:text-sm 2xl:text-base mt-[2.4375rem]">
             청춘이 있는 바이며, 말이다. 같지 노년에게서 어디 모래뿐일 무엇을
             풀이 옷을 봄바람이다. 새 천고에 놀이 내는 찾아 창공에 광야에서
             살았으며, 듣는다. 수 있는 긴지라 사는가 낙원을 웅대한 아니다. 내는
@@ -48,8 +48,11 @@ const BrandStory = () => {
             칼이다. 쓸쓸한 희망의 못할 것은 목숨을 수 그들을 아름답고 고행을
             끝에 설산에서 황금시대를 이상을 운다.
           </span>
-          <div className="mt-12">
-            <Button onClick={() => {}} />
+          <div className="2xl:mt-12 lg:mt-8">
+            <Button
+              className="w-full lg:w-auto text-sm lg:h-10  lg:text-sm px-4 py-2 lg:px-2 lg:py-2 2xl:h-[60px] 2xl:text-[23px]"
+              onClick={() => {}}
+            />
           </div>
         </div>
       </div>

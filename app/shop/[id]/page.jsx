@@ -113,7 +113,13 @@ const ProductCard = ({ className, src = img }) => {
       className={cn("flex flex-col items-center w-full", className)}
     >
       <div className="relative w-full aspect-square">
-        <Image src={src} alt="banner" layout="fill" objectFit="cover" quality={100} />
+        <Image
+          src={src}
+          alt="banner"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
       </div>
       <span className="block w-full font-semibold text-base sm:text-lg text-[#222222] mt-3 px-2">
         [what happen] How to create
@@ -133,11 +139,7 @@ const ProductPage = () => {
   const [page, setPage] = useState(1);
 
   const productCards = listImage.map((image, index) => (
-    <ProductCard
-      className="w-full"
-      key={index}
-      src={image}
-    />
+    <ProductCard className="w-full" key={index} src={image} />
   ));
 
   const handleChangePage = (page) => {
@@ -319,16 +321,20 @@ const ProductPage = () => {
               </div>
             </div>
             <div className="flex">
-              <Button
-                isButtonBase
-                title="add cart"
-                className="font-medium flex-1 bg-white text-[#0565bb] border border-[#0565bb] w-1/2 h-[60px]"
-              ></Button>
-              <Button
-                isButtonBase
-                title="buy now"
-                className="font-medium flex-1 bg-[#0565bb] text-white  w-1/2 h-[60px]"
-              ></Button>
+              <Link href="/cart" className="w-1/2">
+                <Button
+                  isButtonBase
+                  title="add cart"
+                  className="font-medium flex-1 bg-white text-[#0565bb] border w-full border-[#0565bb] h-[60px]"
+                ></Button>
+              </Link>
+              <Link href="/cart" className="w-1/2">
+                <Button
+                  isButtonBase
+                  title="buy now"
+                  className="font-medium flex-1 bg-[#0565bb] text-white w-full h-[60px]"
+                ></Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -455,7 +461,17 @@ const ProductPage = () => {
       <div className="h-[2px] w-full bg-[#111] mt-5 mb-10"></div>
       <div className="overflow-x-hidden">
         <div className="flex gap-4 pb-4">
-          {[image6, image7, image8, image9, image10, imageBig1, image6, imageBig1, image8].map((img, index) => (
+          {[
+            image6,
+            image7,
+            image8,
+            image9,
+            image10,
+            imageBig1,
+            image6,
+            imageBig1,
+            image8,
+          ].map((img, index) => (
             <div key={index} className="flex-shrink-0">
               <Image
                 src={img}

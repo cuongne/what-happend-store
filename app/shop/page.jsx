@@ -1,11 +1,10 @@
 "use client";
-import ImageFullFill from "@/components/ImageFullFill";
-import React, { useState } from "react";
-import bannerProduct from "../../public/images/banner-list.png";
+import Pagination from "@/components/Pagination";
 import ProductCard from "@/components/ProductCard";
 import { cn } from "@/utils/lib";
-import Pagination from "@/components/Pagination";
 import Image from "next/image";
+import { useState } from "react";
+import bannerProduct from "../../public/images/banner-list.png";
 
 const categories = [
   "All",

@@ -4,6 +4,7 @@ import React from "react";
 import { useState } from "react";
 import image6 from "../../public/images/list/item6.png";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 const DeleteIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="26.5" height="26.5">
@@ -164,14 +165,16 @@ const Cart = () => {
       </div>
       <div className="h-[2px] w-full bg-[#9a9a9a]"></div>
       <div className="mt-16 md:mt-28 w-full flex items-center justify-center">
-        <Button
-          isButtonBase
-          className="text-[#fff] bg-[#0565bb] w-full md:w-[323px] h-[60px]"
-          onClick={() => {}}
-          title=""
-        >
-         check out
-        </Button>
+        <Link href="/order">
+          <Button
+            isButtonBase
+            className="text-[#fff] bg-[#0565bb] w-full md:w-[323px] h-[60px]"
+            onClick={() => {}}
+            title=""
+          >
+           check out
+          </Button>
+        </Link>
       </div>
     </div>
   );
