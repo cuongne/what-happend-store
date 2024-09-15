@@ -31,14 +31,24 @@ const Issue = () => {
       </div>
       <div className="h-[480px] w-full flex border-[3px] border-[#111]">
         <div className="relative bg-[#ff5500] w-[387px] flex flex-col gap-[63px] items-center py-20">
-          <span className="font-extrabold uppercase text-[55px] block w-[189px] leading-[57px]">
+          <span className="font-extrabold uppercase text-5xl block w-40 leading-10">
             whpn issue
           </span>
           <div className="cursor-pointer">
-            <ImageFullFill src={arrow} width={148} height={148} />
+            <ImageFullFill
+              src={arrow}
+              width={148}
+              height={148}
+              className="w-full h-auto max-w-[148px]"
+            />
           </div>
           <div className="absolute right-0 bottom-0 translate-y-1/2 translate-x-4 z-10">
-            <ImageFullFill src={coin} width={167} height={169} />
+            <ImageFullFill
+              src={coin}
+              width={167}
+              height={169}
+              className="w-full h-auto max-w-[167px]"
+            />
           </div>
         </div>
         <div className="bg-[#110e03] w-[387px] flex flex-col items-center">
@@ -47,7 +57,12 @@ const Issue = () => {
           </span>
 
           <div className="cursor-pointer">
-            <ImageFullFill src={dbrand} width={387} height={402} />
+            <ImageFullFill
+              src={dbrand}
+              width={387}
+              height={402}
+              className="w-full h-auto max-w-[387px]"
+            />
           </div>
         </div>
         <div className="bg-[#110e03] w-[387px] flex flex-col items-center">
@@ -55,8 +70,13 @@ const Issue = () => {
             c brand
           </span>
 
-          <div className="cursor-pointer">
-            <ImageFullFill src={cbrand} width={398} height={402} />
+          <div className="cursor-pointer translate-x-2">
+            <ImageFullFill
+              src={cbrand}
+              width={398}
+              height={402}
+              className="w-full h-auto max-w-[398px]"
+            />
           </div>
         </div>
         <div className="relative bg-[#110e03] w-[387px] flex flex-col items-center">
@@ -65,10 +85,20 @@ const Issue = () => {
           </span>
 
           <div className="cursor-pointer">
-            <ImageFullFill src={dbrand} width={387} height={402} />
+            <ImageFullFill
+              src={dbrand}
+              width={387}
+              height={402}
+              className="w-full h-auto max-w-[387px]"
+            />
           </div>
           <div className="absolute right-0 bottom-0 translate-y-[60%] translate-x-6 z-10">
-            <ImageFullFill src={lol} width={133} height={100} />
+            <ImageFullFill
+              src={lol}
+              width={133}
+              height={100}
+              className="w-full h-auto max-w-[133px]"
+            />
           </div>
         </div>
         <div className="bg-[#110e03] w-[387px] flex flex-col items-center">
@@ -77,7 +107,12 @@ const Issue = () => {
           </span>
 
           <div className="cursor-pointer">
-            <ImageFullFill src={ebrand} width={387} height={402} />
+            <ImageFullFill
+              src={ebrand}
+              width={387}
+              height={402}
+              className="w-full h-auto max-w-[387px]"
+            />
           </div>
         </div>
       </div>

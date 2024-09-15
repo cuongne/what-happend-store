@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ProductCard = ({ className, src = img }) => {
   return (
-    <Link href="/shop/24" className={cn("flex flex-col items-center w-full max-w-[298px]", className)}>
+    <Link href="/shop/24" className={cn("flex flex-col items-center w-[300px]", className)}>
       <div className="relative w-full aspect-square">
         <Image src={src} alt="product" layout="fill" objectFit="cover" quality={100} />
       </div>

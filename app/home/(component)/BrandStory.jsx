@@ -48,7 +48,7 @@ const BrandStory = () => {
             칼이다. 쓸쓸한 희망의 못할 것은 목숨을 수 그들을 아름답고 고행을
             끝에 설산에서 황금시대를 이상을 운다.
           </span>
-          <div className="mt-[47px]">
+          <div className="mt-12">
             <Button onClick={() => {}} />
           </div>
         </div>
