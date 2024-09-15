@@ -5,6 +5,7 @@ import bannerProduct from "../../public/images/banner-list.png";
 import ProductCard from "@/components/ProductCard";
 import { cn } from "@/utils/lib";
 import Pagination from "@/components/Pagination";
+import Image from "next/image";
 
 const categories = [
   "All",
@@ -15,15 +16,10 @@ const categories = [
   "Habit",
 ];
 
-
-const SortSelect = ({ value, onChange }) => {
+const SortSelect = () => {
   return (
     <div className="relative w-full sm:w-auto">
-      <select
-        value={value}
-        onChange={onChange}
-        className="font-notoSansKR text-sm w-full sm:w-[125px] h-[37px] px-[11px] border border-[#111] appearance-none bg-white focus:outline-none focus:ring-0"
-      >
+      <select className="font-notoSansKR text-sm w-full sm:w-[125px] h-[37px] px-[11px] border border-[#111] appearance-none bg-white focus:outline-none focus:ring-0">
         <option value="featured">인기순</option>
         <option value="newest">Newest</option>
       </select>
@@ -79,7 +75,12 @@ const GridButton = ({ type, active, onClick }) => {
   );
 };
 const productCards = Array.from({ length: 20 }, (_, index) => (
-  <ProductCard key={index} className="max-w-[415px]" width="415px" height="417px" />
+  <ProductCard
+    key={index}
+    className="max-w-[415px]"
+    width="415px"
+    height="417px"
+  />
 ));
 const Shop = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -91,65 +92,75 @@ const Shop = () => {
     setPage(page);
   };
   return (
-    <div className="px-4 sm:px-6 md:px-8 lg:px-[100px] flex flex-col items-center">
-      <ImageFullFill src={bannerProduct} width={1930} height={640} className="w-full" />
-      <div className="flex flex-col items-center mt-4 sm:mt-[39px] w-full">
-        <div className="flex flex-wrap justify-center">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={cn(
-                "border-none font-extrabold text-base sm:text-lg uppercase w-1/2 sm:w-[161px] h-[60px] sm:h-[78px]",
-                `${
-                  activeCategory === category
-                    ? "text-[#245fc5]"
-                    : "text-[#111111]"
-                }`
-              )}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        <div className="h-[2px] w-full bg-[#111]"></div>
-        <span className="pl-4 sm:pl-[98px] py-4 sm:py-[23px] block w-full font-notoSansKR font-bold text-[#ea4913] text-sm sm:text-base">
-          전체보기
-        </span>
-        <div className="h-[2px] w-full bg-[#a1a1a1]"></div>
-        <div className="flex flex-col sm:flex-row w-full justify-between items-center mt-4 sm:mt-[35px] mb-6 sm:mb-[61px]">
-          <span className="font-notoSansKR text-[#111111] font-bold text-sm sm:text-base mb-4 sm:mb-0">
-            전체 상품 207
-          </span>
-          <div className="flex flex-wrap gap-2 sm:gap-[9px] justify-center sm:justify-start">
-            <GridButton
-              type="2x2"
-              active={gridType === "2x2"}
-              onClick={() => setGridType("2x2")}
-            />
-            <GridButton
-              type="3x3"
-              active={gridType === "3x3"}
-              onClick={() => setGridType("3x3")}
-            />
-            <SortSelect />
-            <SearchInput />
+    <>
+      <Image
+        src={bannerProduct}
+        alt={"image"}
+        sizes="100vw"
+        quality={100}
+        className="object-contain"
+      />
+      <div className="px-4 sm:px-6 md:px-8 lg:px-[100px] flex flex-col items-center overflow-hidden">
+        <div className="flex flex-col items-center mt-4 sm:mt-[39px] w-full">
+          <div className="flex flex-wrap justify-center">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={cn(
+                  "border-none font-extrabold text-base sm:text-lg uppercase w-1/2 sm:w-[161px] h-[60px] sm:h-[78px]",
+                  `${
+                    activeCategory === category
+                      ? "text-[#245fc5]"
+                      : "text-[#111111]"
+                  }`
+                )}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
           </div>
+          <div className="h-[2px] w-full bg-[#111]"></div>
+          <span className="pl-4 sm:pl-[98px] py-4 sm:py-[23px] block w-full font-notoSansKR font-bold text-[#ea4913] text-sm sm:text-base">
+            전체보기
+          </span>
+          <div className="h-[2px] w-full bg-[#a1a1a1]"></div>
+          <div className="flex flex-col sm:flex-row w-full justify-between items-center mt-4 sm:mt-[35px] mb-6 sm:mb-[61px]">
+            <span className="font-notoSansKR text-[#111111] font-bold text-sm sm:text-base mb-4 sm:mb-0">
+              전체 상품 207
+            </span>
+            <div className="flex flex-wrap gap-2 sm:gap-[9px] justify-center sm:justify-start">
+              <GridButton
+                type="2x2"
+                active={gridType === "2x2"}
+                onClick={() => setGridType("2x2")}
+              />
+              <GridButton
+                type="3x3"
+                active={gridType === "3x3"}
+                onClick={() => setGridType("3x3")}
+              />
+              <SortSelect />
+              <SearchInput />
+            </div>
+          </div>
+          <div
+            className={`product-list grid gap-4 sm:gap-x-[19px] sm:gap-y-[67px] w-full ${
+              gridType === "2x2"
+                ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+            }`}
+          >
+            {productCards}
+          </div>
+          <Pagination
+            totalPages={3}
+            currentPage={page}
+            onPageChange={handleChangePage}
+          />
         </div>
-        <div className={`product-list grid gap-4 sm:gap-x-[19px] sm:gap-y-[67px] w-full ${
-          gridType === "2x2" 
-            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" 
-            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-        }`}>
-          {productCards}
-        </div>
-        <Pagination
-          totalPages={3}
-          currentPage={page}
-          onPageChange={handleChangePage}
-        />
       </div>
-    </div>
+    </>
   );
 };
 
