@@ -181,13 +181,13 @@ const ProductPage = () => {
           </Button>
         </div>
         <div className="flex flex-col items-center w-full lg:w-[40%] mb-8 lg:mb-0">
-          <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:w-[707px] lg:h-[707px]">
+          <div className="relative w-full h-[400px] sm:h-[400px] md:h-[500px] lg:w-[550px] lg:h-[550px] 2xl:w-[707px] 2xl:h-[707px]">
             {images.map((image, index) => (
               <Image
                 key={index}
                 src={image}
                 alt={`image${index + 1}`}
-                fill
+                sizes="100vw"
                 quality={100}
                 className={cn(
                   "object-cover transition-opacity duration-300",
