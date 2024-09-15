@@ -209,7 +209,7 @@ const ProductPage = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col w-full lg:w-[38%]">
+        <div className="flex flex-col w-full lg:w-[38%] lg:mb-10 2xl:mb-0">
           <div className="h-[2px] w-full bg-[#111] mb-[30px]"></div>
           <div>
             <h1 className="text-2xl font-medium mb-[30px] flex justify-between">
