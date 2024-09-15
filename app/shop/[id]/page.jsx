@@ -106,22 +106,21 @@ const ItemComment = ({ src }) => (
 
 const listImage = [image6, imageBig1, image8, image9, image10];
 
-const ProductCard = ({ className, width, height, src = img }) => {
+const ProductCard = ({ className, src = img }) => {
   return (
     <Link
       href={`/shop/34`}
-      className={cn("flex flex-col items-center ", className)}
+      className={cn("flex flex-col items-center w-full", className)}
     >
-      <div className="relative " style={{ width, height }}>
-        <Image src={src} alt="banner" layout="fill" quality={100} />
+      <div className="relative w-full aspect-square">
+        <Image src={src} alt="banner" layout="fill" objectFit="cover" quality={100} />
       </div>
-      <span className="block w-full font-semibold text-lg text-[#222222] mt-3 px-2">
-        {" "}
-        [what happen] How to create{" "}
+      <span className="block w-full font-semibold text-base sm:text-lg text-[#222222] mt-3 px-2">
+        [what happen] How to create
       </span>
-      <div className="flex justify-between items-center w-full mt-6 px-2">
-        <span className="text-[#222222]">2,500 won</span>
-        <span className="text-[#666666]">🧡 236</span>
+      <div className="flex justify-between items-center w-full mt-4 sm:mt-6 px-2">
+        <span className="text-sm sm:text-base text-[#222222]">2,500 won</span>
+        <span className="text-sm sm:text-base text-[#666666]">🧡 236</span>
       </div>
     </Link>
   );
@@ -135,11 +134,9 @@ const ProductPage = () => {
 
   const productCards = listImage.map((image, index) => (
     <ProductCard
-      className="w-[336px]"
+      className="w-full"
       key={index}
       src={image}
-      width={336}
-      height={336}
     />
   ));
 
@@ -256,7 +253,7 @@ const ProductPage = () => {
                     <br />
                     그늘진 곳에 뉘어서 건조
                     <br />
-                    정전기 예방을 위해 섬유유연제로 헹궈주시면 더 좋음
+                    정전기 예방을 위해 섬유유연제로 헹궤주시면 더 좋음
                   </span>
                 </li>
               </ul>
@@ -484,7 +481,7 @@ const ProductPage = () => {
       <span className="block mb-5 font-notoSansKR-Regular text-[#111] font-semibold text-xl lg:text-2xl mt-[108px]">
         관련 상품 BEST
       </span>
-      <div className="product-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-14">
+      <div className="product-list grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-14">
         {productCards}
       </div>
       <Pagination
