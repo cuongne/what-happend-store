@@ -64,9 +64,15 @@ const ItemCart = ({ id }) => (
       </label>
       <div className="flex flex-col md:flex-row justify-between w-full md:w-[45%]">
         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-          <Image src={image6} alt="image1" width={120} height={120} className="mx-auto md:mx-0" />
+          <Image 
+            src={image6} 
+            alt="image1" 
+            width={120} 
+            height={120} 
+            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-cover mx-auto md:mx-0" 
+          />
           <div className="flex flex-col gap-2 justify-center">
-            <span className="font-notoSansKR text-lg text-[#111]">
+            <span className="font-notoSansKR text-lg text-[#111] xl:text-sm 2xl:text-lg truncate">
               [apparel] what happened beanie
             </span>
             <span className="font-notoSansKR text-sm text-[#111]">
