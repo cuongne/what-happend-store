@@ -13,7 +13,7 @@ import Button from "@/components/Button";
 import { cn } from "@/utils/lib";
 import Pagination from "@/components/Pagination";
 import Link from "next/link";
-const images = [imageBig1, image2];
+const images = [imageBig1, image10];
 
 const Arrow = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="34" height="11">
@@ -172,7 +172,7 @@ const ProductPage = () => {
           >
             <Image
               className=""
-              src={image2}
+              src={image10}
               alt="image2"
               width={80}
               height={80}
@@ -187,9 +187,10 @@ const ProductPage = () => {
                 src={image}
                 alt={`image${index + 1}`}
                 sizes="100vw"
+                fill
                 quality={100}
                 className={cn(
-                  "object-cover transition-opacity duration-300",
+                  "absolute object-cover transition-opacity duration-300",
                   selectedImage === index ? "opacity-100" : "opacity-0"
                 )}
               />
