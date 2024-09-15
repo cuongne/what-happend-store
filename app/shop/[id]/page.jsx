@@ -453,17 +453,19 @@ const ProductPage = () => {
         </span>
       </div>
       <div className="h-[2px] w-full bg-[#111] mt-5 mb-10"></div>
-      <div className="overflow-hidden">
-        <div className="gap-4 flex">
-          <Image src={image6} alt="image1" width={213} height={213} />
-          <Image src={image7} alt="image1" width={213} height={213} />
-          <Image src={image8} alt="image1" width={213} height={213} />
-          <Image src={image9} alt="image1" width={213} height={213} />
-          <Image src={image10} alt="image1" width={213} height={213} />
-          <Image src={imageBig1} alt="image1" width={213} height={213} />
-          <Image src={image6} alt="image1" width={213} height={213} />
-          <Image src={imageBig1} alt="image1" width={213} height={213} />
-          <Image src={image8} alt="image1" width={213} height={213} />
+      <div className="overflow-x-hidden">
+        <div className="flex gap-4 pb-4">
+          {[image6, image7, image8, image9, image10, imageBig1, image6, imageBig1, image8].map((img, index) => (
+            <div key={index} className="flex-shrink-0">
+              <Image
+                src={img}
+                alt={`image${index + 1}`}
+                width={213}
+                height={213}
+                className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[213px] md:h-[213px] object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
       <ItemComment src={image6} />
